@@ -54,7 +54,7 @@
             });
         // }
 
-        ar menu = $('header.Header');
+        var menu = $('header.Header');
         var html = menu.html();
         var intro = $('#intro');
         $window = $(window);
