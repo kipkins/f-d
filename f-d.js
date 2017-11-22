@@ -1,4 +1,4 @@
-// fine_n_dandy
+// f_n_d
 (function($) {
     console.log('Pathname', window.location.pathname)
     $(function() {
