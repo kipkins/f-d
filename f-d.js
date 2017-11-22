@@ -1,7 +1,7 @@
 // f_n_d
-// (function($) {
+(function($) {
     console.log('Pathname', window.location.pathname)
-    // $(function() {
+    $(function() {
         if (window.location.pathname === '/') {
             var menu = $('header.Header');
             var html = menu.html()
@@ -53,5 +53,5 @@
                 setHeight();
             });
         }
-    // });
-// }(jQuery));
+    });
+}(jQuery));
