@@ -22,7 +22,7 @@ $(document).ready(function() {
   }
 
   function mobileScreenTricks(){
-    if (bottomNavigation.css("display".toLowerCase() === "none") {
+    if (bottomNavigation.css("display".toLowerCase() === "none")) {
         bottomNavigation.removeAttr("style");
     }
     if ($window.scrollTop() === 0) {
