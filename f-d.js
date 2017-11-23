@@ -17,9 +17,7 @@
             $window.scroll(function() { // mobile nav
                 if (window.innerWidth < 1200) {
                     if (bottomNavigation.css('display').toLowerCase() === 'none') {
-                        bottomNavigation.css({
-                            display: 'block'
-                        })
+                        bottomNavigation.removeAttr("style");
                     }
                     if ($window.scrollTop() === 0) {
                         bottomNavigation.css({
