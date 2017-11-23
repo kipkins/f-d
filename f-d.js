@@ -18,34 +18,32 @@ $(document).ready(function() {
     else fullScreenTricks();
     });
   }
+
+  function mobileScreenTricks(){
+    if (bottomNavigation.css('display').toLowerCase() === 'none') {
+        bottomNavigation.removeAttr("style");
+    }
+    if ($window.scrollTop() === 0) {
+        bottomNavigation.css({
+            display: 'none'
+        })
+    }
+  }
+
+  function fullScreenTricks(){
+    if (distance === 0) {
+        distance = $('.Header-inner').offset().top;
+    }
+    if ($window.scrollTop() >= distance) {
+        $('.Header-inner').remove();
+        $(menu).append(html);
+    } else {
+        menu.empty();
+        var exists = $('.Header-inner');
+        if (exists.length === 0) {
+            intro.append(html);
+        }
+    }
+  }
+
 });
-
-
-
-
-function mobileScreenTricks(){
-  if (bottomNavigation.css('display').toLowerCase() === 'none') {
-      bottomNavigation.removeAttr("style");
-  }
-  if ($window.scrollTop() === 0) {
-      bottomNavigation.css({
-          display: 'none'
-      })
-  }
-}
-
-function fullScreenTricks(){
-  if (distance === 0) {
-      distance = $('.Header-inner').offset().top;
-  }
-  if ($window.scrollTop() >= distance) {
-      $('.Header-inner').remove();
-      $(menu).append(html);
-  } else {
-      menu.empty();
-      var exists = $('.Header-inner');
-      if (exists.length === 0) {
-          intro.append(html);
-      }
-  }
-}
